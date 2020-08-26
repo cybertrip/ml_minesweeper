@@ -1,4 +1,7 @@
 # ai-minesweeper
+A Machine Learning Algorithm that will solve MineSweeper iteratively.
+Data will be collected and converted into useful information. 
+
 Overall Objectives
 	> Program will layout a minesweeper board 
 	> Machine Learning Algorithm / Artificial Intelligence will attempt to solve it

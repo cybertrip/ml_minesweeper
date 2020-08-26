@@ -2,7 +2,8 @@
 """
 	> numpy		necessary for creating two dimensional array
 """
-import numpy as np
+import numpy as gb
+import random
 
 def gameboard(r, c, d):
 	#  Dimensions of gameboard  #
@@ -28,17 +29,36 @@ def gameboard(r, c, d):
 		> all indices that are safe are initialized as 0
 	"""
 	#gameboard = [[0] * column] * row
-	gameboard = np.full((row, column), 0) 
+	gameboard = gb.full((row, column), 0) 
 
 
 	#  Station bomb instances  #
 	"""
 		> Stations bombs at random locations
-		> Quantity of bombs determined by difficulty scale
+		> fields is the quantity of each element of gameboard
+		> bombScale is the quantity of bombs in ratio to gameboard size
+		> bombQuantity is the quantity of bombs in the gameboard
+		> bombCount is the incrementer for the while loop
+		> while loop will run until each unique field is a bomb
+		> 1 is bomb, 0 is safe
 	"""
-	gameboard[2][1] = 1
+	fields = row * column
+	bombScale = (difficulty + 1) / 10
+	bombQuantity = int (fields * bombScale)
 
+	print("Number of bombs:", bombQuantity)
 
+	bombCount = 0
+	while (bombCount < bombQuantity):
+		x = random.randint(0, row - 1)
+		y = random.randint(0, column - 1)
+		if gameboard[x][y] != 1:
+			gameboard[x][y] = 1
+		else:
+			bombCount -= 1
+		bombCount += 1
+	
+	
 	#  Return gameboard  #
 	"""
 		> Returns constructed gameboard 

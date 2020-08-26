@@ -5,6 +5,6 @@
 from gameboard import *
 
 print("Create gameboard")
-gameboard = gameboard(3, 3, 1)
+gameboard = gameboard(9, 9, 2)
 
 print(gameboard)

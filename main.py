@@ -1,8 +1,14 @@
+#  Main Driver  #
+"""
+	> Main driver for executing whole program
+	> Just for tidiness of code
+"""
+
 #  Import other Python files  #
 """
-	> gameboard		layout for MineSweeper gameboard
+	> gameboard		layout for Minesweeper gameboard
 """
-from gameboard import *
+from minesweeper import *
 
 print("Create gameboard")
 gameboard = gameboard(9, 9, 2)

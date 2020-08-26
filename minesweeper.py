@@ -1,3 +1,10 @@
+#  Minesweeper  #
+"""
+	> Sets rule of Minesweeper game
+	> Both human and machine interact with rules
+"""
+
+
 #  Import other Python files  #
 """
 	> numpy		necessary for creating two dimensional array

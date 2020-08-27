@@ -6,3 +6,10 @@
 		> This is for the Machine Learning Algorithm
 	> All will be controlled with command line interface
 """
+
+
+#  Import other Python files  #
+"""
+	> isBomb	Checks if field is a bomb
+"""
+from minesweeper import isBomb

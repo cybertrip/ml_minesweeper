@@ -8,9 +8,9 @@
 """
 	> gameboard		layout for Minesweeper gameboard
 """
-from minesweeper import *
+from minesweeper import gameboard
 
 print("Create gameboard")
-gameboard = gameboard(9, 9, 2)
+gameboard = gameboard(9, 9, 4)
 
 print(gameboard)

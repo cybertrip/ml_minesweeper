@@ -1,17 +1,27 @@
 #  Minesweeper  #
 """
 	> Sets rule of Minesweeper game
-	> Both human and machine interact with rules
+	> Creates gameboard
+	> Both human and machine will interact with rules
 """
 
 
 #  Import other Python files  #
 """
 	> numpy		necessary for creating two dimensional array
+	> random	generating random numbers for element selection
 """
 import numpy as gb
 import random
 
+
+#  Create Minesweeper gameboard  #
+"""
+	> r is quantity of row
+	> c is quantity of columns
+	> d is scale of difficulty
+	> Returns the gameboard
+"""
 def gameboard(r, c, d):
 	#  Dimensions of gameboard  #
 	"""
@@ -71,3 +81,21 @@ def gameboard(r, c, d):
 		> Returns constructed gameboard 
 	"""
 	return gameboard
+
+
+#  ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~  #
+
+
+#  Is the field a bomb  #
+"""
+	> r is location of row
+	> c is location of columns
+	> Returns a boolean
+"""
+def isBomb(r, c):
+	#  Location of field  #
+	"""
+		> row 		is location of x field
+		> column 	is location of y field
+	"""
+	row, column = r, c

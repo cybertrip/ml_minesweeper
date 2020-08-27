@@ -22,7 +22,7 @@ import random
 	> d is scale of difficulty
 	> Returns the gameboard
 """
-def gameboard(r, c, d):
+def layoutBoard(r, c, d):
 	#  Dimensions of gameboard  #
 	"""
 		> row 		is size of gameboard's width
@@ -92,10 +92,62 @@ def gameboard(r, c, d):
 	> c is location of columns
 	> Returns a boolean
 """
-def isBomb(r, c):
+def isBomb(r, c, gameboard):
 	#  Location of field  #
 	"""
 		> row 		is location of x field
 		> column 	is location of y field
 	"""
 	row, column = r, c
+
+
+	#  Check if bomb  #
+	"""
+		> If bomb return 1
+		> If safe return 0
+	"""
+	if gameboard[row][column] != 0:
+		return 1
+	else:
+		return 0
+
+
+#  ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~  #
+
+
+#  Quantity of bombs surrounding field  #
+"""
+	> r is location of row
+	> c is location of columns
+	> Returns an int
+"""
+def nearBomb(r, c, gameboard):
+	#  Location of field  #
+	"""
+		> row 		is location of x field
+		> column 	is location of y field
+	"""
+	row, column = r, c
+
+
+	#  Bombs near field  #
+	"""
+		> 
+	"""
+	bombCount = 0
+	for sweepX in range (-1, 2):
+		for sweepY in range (-1, 2):
+			bombCount += isBomb(row + sweepX, column + sweepY, gameboard)
+	
+	return bombCount
+	
+
+#  ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~  #
+
+
+#  Quantity of bombs surrounding field  #
+"""
+	> r is location of row
+	> c is location of columns
+	> Returns an int
+"""

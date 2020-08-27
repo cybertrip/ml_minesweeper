@@ -7,10 +7,13 @@
 #  Import other Python files  #
 """
 	> gameboard		layout for Minesweeper gameboard
+	> interface		human / machine control of Minesweeper game
 """
-from minesweeper import gameboard
+from minesweeper import *
+from interface	 import *
 
 print("Create gameboard")
-gameboard = gameboard(9, 9, 4)
+gameboard = layoutBoard(9, 9, 4)
 
 print(gameboard)
+nearBomb(3,3, gameboard)

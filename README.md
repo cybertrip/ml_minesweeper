@@ -3,8 +3,8 @@ A Machine Learning Algorithm that will solve Minesweeper iteratively.
 Data will be collected and converted into useful information. 
 
 Overall Objectives
-	> Program will layout a Minesweeper board 
-	> Machine Learning Algorithm / Artificial Intelligence will attempt to solve it
+	> Program will layout a Minesweeper board\
+	> Machine Learning Algorithm / Artificial Intelligence will attempt to solve it\
 	> Collect data for win rate and other miscellaneous
 
 To Do List

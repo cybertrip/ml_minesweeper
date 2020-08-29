@@ -1,14 +1,10 @@
-#  Main Driver  #
-"""
-	> Main driver for executing whole program
-	> Just for tidiness of code
-"""
+#  Main Driver
+#		> Main driver for executing whole program
+#		> Just for tidiness of code
 
-#  Import other Python files  #
-"""
-	> gameboard		layout for Minesweeper gameboard
-	> interface		human / machine control of Minesweeper game
-"""
+#	Import other Python files
+#		> gameboard		layout for Minesweeper gameboard
+#		> interface		human / machine control of Minesweeper game
 from minesweeper import *
 from interface	 import *
 

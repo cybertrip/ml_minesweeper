@@ -9,7 +9,7 @@ from minesweeper import *
 from interface	 import *
 
 print("Create gameboard")
-gameboard = layoutBoard(9, 9, 4)
+gameboard = layoutBoard(9, 9, 5)
 
 print(gameboard)
-nearBomb(3,3, gameboard)
+print(nearBomb(4, 4, gameboard))

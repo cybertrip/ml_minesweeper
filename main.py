@@ -1,16 +1,15 @@
-#  Main Driver  #
-"""
-	> Main driver for executing whole program
-	> Just for tidiness of code
-"""
+#  Main Driver
+#		> Main driver for executing whole program
+#		> Just for tidiness of code
 
-#  Import other Python files  #
-"""
-	> gameboard		layout for Minesweeper gameboard
-"""
-from minesweeper import gameboard
+#	Import other Python files
+#		> gameboard		layout for Minesweeper gameboard
+#		> interface		human / machine control of Minesweeper game
+from minesweeper import *
+from interface	 import *
 
 print("Create gameboard")
-gameboard = gameboard(9, 9, 4)
+gameboard = layoutBoard(9, 9, 5)
 
 print(gameboard)
+print(nearBomb(4, 4, gameboard))

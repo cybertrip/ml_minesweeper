@@ -9,4 +9,4 @@
 #  Import other Python files  #
 #   > isBomb  Checks if field is a bomb
 #
-from minesweeper import isBomb
+from minesweeper import *

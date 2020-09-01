@@ -160,3 +160,8 @@ def nearBomb(r, c, b):
   
 
 #  ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~  #
+
+
+# Reveal Near Fields that are Safe
+def nearSafe(r, c, b):
+	

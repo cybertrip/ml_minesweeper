@@ -69,7 +69,7 @@ def layoutBoard(r, c, d):
 #  ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~  #
 
 
-#  Is the field a bomb
+# Is the field a bomb
 #   > r is location of row
 #   > c is location of columns
 #   > b is the Minesweeper board
@@ -93,12 +93,12 @@ def isBomb(r, c, b):
 #  ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~  #
 
 
-#  Quantity of bombs surrounding field
+# Quantity of bombs surrounding field
 #   > r is location of row
 #   > c is location of columns
 #   > b is the Minesweeper board
-#   > Returns an int
-def nearBomb(r, c, b):
+#   > Returns an two ints (bomb quantity, safe quantity)
+def nearField(r, c, b):
   #  Location of field
   #   > row     is location of x field
   #   > column  is location of y field
@@ -107,7 +107,7 @@ def nearBomb(r, c, b):
 
   # Check for Out of Bounds
   #   > rowMin is the minimum row value for the bomb search
-  #   > If row    - 1  is at location zero then don't search behind it
+  #   > If row - 1  is at location zero then don't search behind it
   if(row > 0):
     rowMin = row - 1
   else:
@@ -115,16 +115,15 @@ def nearBomb(r, c, b):
   
 
   #   > columnMin is the minimum column value for the bomb search
-  #   > If column - 1  is at location zero then don't search behind it
+  #   > If column - 1 is at location zero then don't search behind it
   if(column > 0):
     columnMin = c - 1
-  else:
-    columnMin = column
+  else:    columnMin = column
 
 
   # Check for Out of Bounds
   #   > rowMax is the maximum row value for the bomb search
-  #   > If row    + 1   is greater than gameboard size, then don't search after it
+  #   > If row + 1 is greater than gameboard size, then don't search after it
   if(row + 1 < len(b)):
     rowMax = row + 2
   else:
@@ -132,14 +131,14 @@ def nearBomb(r, c, b):
 
 
   #   > columnMax is the maximum column value for the bomb search
-  #   > If column + 1   is greater than gameboard size, then don't search after it
+  #   > If column + 1 is greater than gameboard size, then don't search after it
   if(column + 1 < len(b[0])):
     columnMax = column + 2
   else:
     columnMax = column + 1
 
 
-  #  Bombs near field
+  # Bombs near field
   #   > bombCount is the quantity of bombs near the field
   #   > iterates for the selected range
   bombCount = 0
@@ -153,15 +152,23 @@ def nearBomb(r, c, b):
   #   > This test doesn't matter because if the field is a bomb, player loses
   if(isBomb(row, column, b) == 1):
     bombCount -= 1
+  
+  # Quantity of safe fields
+  safeCount = 8 - bombCount
 
 
-  # return bombCount
-  return bombCount
+  # return bombCount and safeCount
+  return bombCount, safeCount
   
 
 #  ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~ ~~~  #
 
 
 # Reveal Near Fields that are Safe
-def nearSafe(r, c, b):
-	
+#   > r is location of row
+#   > c is location of columns
+#   > b is the Minesweeper board
+#   > Returns an int
+def solveField(r, c, b):
+  # Work in Progress
+  return 1

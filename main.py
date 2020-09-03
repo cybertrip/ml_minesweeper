@@ -9,7 +9,8 @@ from minesweeper import *
 from interface	 import *
 
 print("Create gameboard")
-gameboard = layoutBoard(9, 9, 5)
+gameboard = layoutBoard(9, 9, 3)
 
 print(gameboard)
-print(nearBomb(4, 4, gameboard))
+for x in range (0,9,1):
+  print(nearField(x, x, gameboard))
